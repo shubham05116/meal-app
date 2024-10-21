@@ -1,0 +1,13 @@
+.food-image{
+    width: 200px;
+    height: auto ;
+    border-radius: 20px;
+}
+.data{
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+}
+.main-div{
+    margin: 100px;
+}

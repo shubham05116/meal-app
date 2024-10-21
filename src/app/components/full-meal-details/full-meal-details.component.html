@@ -1,0 +1,38 @@
+<div class="main-div">
+  <div *ngFor="let meal of fullMeal[0]">
+    <h2>{{ meal.strMeal }}</h2>
+    <div class="data">
+      <div>
+        <img class="food-image" [src]="meal.strMealThumb" alt="Meal Image" />
+      </div>
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+          <li *ngFor="let ingredient of meal.strIngredient1?.split(',')">
+            {{ ingredient }}
+          </li>
+          <li *ngFor="let ingredient of meal.strIngredient2?.split(',')">
+            {{ ingredient }}
+          </li>
+          <li *ngFor="let ingredient of meal.strIngredient3?.split(',')">
+            {{ ingredient }}
+          </li>
+          <li *ngFor="let ingredient of meal.strIngredient4?.split(',')">
+            {{ ingredient }}
+          </li>
+          <li *ngFor="let ingredient of meal.strIngredient5?.split(',')">
+            {{ ingredient }}
+          </li>
+          <li *ngFor="let ingredient of meal.strIngredient6?.split(',')">
+            {{ ingredient }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Instructions</h3>
+    <p *ngFor="let intruction of meal.strInstructions.split('STEP')">
+      {{ intruction }}
+    </p>
+  </div>
+</div>

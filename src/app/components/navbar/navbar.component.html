@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <span>Meal App</span>
+  <div class="spacer"></div>
+  <a mat-button href="/">Home</a>
+  <div>
+    <form>
+      <mat-form-field class="example-full-width">
+        <mat-label>Search</mat-label>
+        <input
+          type="text"
+          placeholder="Search"
+          aria-label="Number"
+          matInput
+          #input
+          (keyup.enter)="searchMealApp(input.value)"
+        />
+      </mat-form-field>
+      </form>
+
+  </div>
+</mat-toolbar>

@@ -1,0 +1,31 @@
+<div class="card">
+  <div *ngFor="let meal of meals[0]">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ meal?.strCategory }}</mat-card-title>
+      </mat-card-header>
+      <a href="https://material.angular.io/components/card/examples">
+        <img
+          mat-card-image
+          [src]="meal?.strCategoryThumb"
+          alt="Photo of a Shiba Inu"
+        />
+      </a>
+      <mat-card-content>
+        <div>
+          {{ meal?.strCategoryDescription.substring(0, 200) }}
+          <div class="details">
+            <button
+              mat-raised-button
+              [routerLink]="['/meals', meal?.strCategory]"
+            >
+              View Meals
+            </button>
+          </div>
+
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

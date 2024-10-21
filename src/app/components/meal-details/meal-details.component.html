@@ -1,0 +1,16 @@
+<div class="food-card">
+<div *ngFor="let food of foodItems[0]">
+  <div [routerLink]="['/mealDetails' , food?.idMeal ]">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{food?.strMeal}}</mat-card-title>
+          <img mat-card-sm-image [src]="food?.strMealThumb" >
+        </mat-card-title-group>
+      </mat-card-header>
+    </mat-card>
+  </div>
+ 
+</div>
+   
+</div>
