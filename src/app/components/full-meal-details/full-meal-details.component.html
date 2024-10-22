@@ -1,5 +1,5 @@
 <div class="main-div">
-  <div *ngFor="let meal of fullMeal[0]">
+  <div *ngFor="let meal of fullMeal[0]" class="meal-container">
     <h2>{{ meal.strMeal }}</h2>
     <div class="data">
       <div>
@@ -29,10 +29,11 @@
         </ul>
       </div>
     </div>
-
-    <h3>Instructions</h3>
-    <p *ngFor="let intruction of meal.strInstructions.split('STEP')">
-      {{ intruction }}
-    </p>
+    <div>
+      <h3>Instructions</h3>
+      <p *ngFor="let intruction of meal.strInstructions.split('STEP')">
+        {{ intruction }}
+      </p>
+    </div>
   </div>
 </div>

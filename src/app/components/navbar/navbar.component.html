@@ -1,21 +1,36 @@
 <mat-toolbar color="primary">
-  <span>Meal App</span>
-  <div class="spacer"></div>
-  <a mat-button href="/">Home</a>
   <div>
-    <form>
-      <mat-form-field class="example-full-width">
-        <mat-label>Search</mat-label>
-        <input
-          type="text"
-          placeholder="Search"
-          aria-label="Number"
-          matInput
-          #input
-          (keyup.enter)="searchMealApp(input.value)"
-        />
-      </mat-form-field>
-      </form>
-
+    <span>Meal App</span>
+  </div>
+  <div class="options">
+    <a mat-button href="/">Home</a>
+    <a (click)="randomMeal()" >Random Meal</a>
+    <div class="search-bar">
+      <form class="search">
+        <mat-form-field class="example-full-width">
+          <mat-label>Search By Food Name</mat-label>
+          <input
+            type="text"
+            placeholder="Search"
+            aria-label="Number"
+            matInput
+            #input
+            (keyup.enter)="searchMealApp(input.value)"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Search By Nationality</mat-label>
+          <input
+            type="text"
+            placeholder="like Indian , American....."
+            aria-label="Number"
+            matInput
+            #city
+            (keyup.enter)="searchMealAppBycity(city.value)"
+          />
+        </mat-form-field>
+        </form>
+  
+    </div>
   </div>
 </mat-toolbar>

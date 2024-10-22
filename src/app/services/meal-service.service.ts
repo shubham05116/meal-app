@@ -13,9 +13,12 @@ export class MealService {
   private fullMealDetailUrl =
     'https://www.themealdb.com/api/json/v1/1/lookup.php?i=';
 
-  allMeals: any[] = [];
-
   private searchUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+
+  private randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
+
+  private cityFilterUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?a=";
+
   constructor(private mealService: HttpClient) {}
 
   getPosts() {
@@ -32,5 +35,12 @@ export class MealService {
 
   searchMeals(searchTerm: string) {
     return this.mealService.get<any>(this.searchUrl + searchTerm);
+  }
+
+  getRandomMeal() {
+    return this.mealService.get<any>(this.randomMealUrl);
+  }
+  getMealsByCity(city: string) {
+    return this.mealService.get<any>(this.cityFilterUrl + city);
   }
 }

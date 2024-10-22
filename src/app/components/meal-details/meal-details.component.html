@@ -1,5 +1,5 @@
 <div class="food-card">
-<div *ngFor="let food of foodItems[0]">
+<div *ngFor="let food of foodItems">
   <div [routerLink]="['/mealDetails' , food?.idMeal ]">
     <mat-card class="example-card" appearance="outlined">
       <mat-card-header>

@@ -5,11 +5,12 @@ import { MealDetailsComponent } from './components/meal-details/meal-details.com
 import { FullMealDetailsComponent } from './components/full-meal-details/full-meal-details.component';
 
 const routes: Routes = [
-  { path: '', component: AllmealsComponent   },
-  { path: 'meals/:id', component: MealDetailsComponent },
-  {path:'mealDetails/:id', component: FullMealDetailsComponent}
-];
+  { path: '', component: AllmealsComponent },
+  // { path: 'meals/:id', component: MealDetailsComponent },
+  { path: 'mealDetails/:id', component: FullMealDetailsComponent },
+  { path: 'meals', component: MealDetailsComponent },
 
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

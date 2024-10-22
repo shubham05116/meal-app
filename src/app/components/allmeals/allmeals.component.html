@@ -18,7 +18,8 @@
           <div class="details">
             <button
               mat-raised-button
-              [routerLink]="['/meals', meal?.strCategory]"
+              [routerLink]="['/meals']"
+              [queryParams]="{meals: meal?.strCategory}"
             >
               View Meals
             </button>

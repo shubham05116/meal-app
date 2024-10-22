@@ -1,13 +1,28 @@
-.food-image{
-    width: 200px;
-    height: auto ;
+.food-image {
+    width: 300px;
+    height: auto;
     border-radius: 20px;
 }
-.data{
-    margin: 20px;
+
+.data {
     display: flex;
-    gap: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
-.main-div{
-    margin: 100px;
+
+.meal-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.main-div {
+    margin-left: 10px;
 }
